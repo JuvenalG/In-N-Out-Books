@@ -13,6 +13,7 @@ import { BookListComponent } from './book-list/book-list.component';
 import {ContactComponent} from "./contact/contact.component";
 import {AboutComponent} from "./about/about.component";
 import { WishlistComponent } from "./wishlist/wishlist.component";
+import { AppComponent } from './app.component';
 
 //Route array that links the paths to their components
 const routes: Routes = [
@@ -35,7 +36,9 @@ const routes: Routes = [
   {
     path: "wishlist" ,
     component: WishlistComponent
-  }
+  },
+  { path: '**',
+    component:  BookListComponent }
 ];
 
 @NgModule({
