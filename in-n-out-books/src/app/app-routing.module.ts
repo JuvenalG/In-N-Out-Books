@@ -37,7 +37,7 @@ const routes: Routes = [
     path: "wishlist" ,
     component: WishlistComponent
   },
-  { path: '**',
+  { path: '**',         //used to redirect improper paths back to booklist
     component:  BookListComponent }
 ];
 
