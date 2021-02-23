@@ -32,14 +32,14 @@ export class BooksService {
   constructor(private http: HttpClient) {
 
   }
-
+ //
   getBooks() {
-    let params = new HttpParams();
-
+    let params = new HttpParams(); //allows url parameters to be called and used when returning
+  //adds value to the array
     params = params.append('bibkeys', `ISBN:${this.isbns.join(',')}`);
     params = params.append('format', 'json');
     params = params.append('jscmd', 'details');
-    return this.http.get('https://openlibrary.org/api/books', {params: params})
+    return this.http.get('https://openlibrary.org/api/books', {params: params}) //returns the params array
   }
 
 }

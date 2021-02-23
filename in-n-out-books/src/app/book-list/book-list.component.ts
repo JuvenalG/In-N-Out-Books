@@ -25,18 +25,18 @@ export class BookListComponent implements OnInit {
   book: IBook;//mapped to book object
 
   constructor(private booksService: BooksService, private dialog: MatDialog) {
-    this.booksService.getBooks().subscribe(res => {
+    this.booksService.getBooks().subscribe(res => { //stores all params in res
       console.log(res);
       for (let key in res) {
         if (res.hasOwnProperty(key)) {
           let authors = [];
           if (res[key].details.authors) {
-            authors = res[key].details.authors.map(function(author) {
+            authors = res[key].details.authors.map(function(author) { //stores authors in authors array
               return author.name;
             })
           }
 
-
+                //pushes new object to array of books
           this.books.push({
             isbn: res[key].details.isbn_13 ? res[key].details.isbn_13 : res[key].details.isbn_10,
             title: res[key].details.title,
@@ -51,7 +51,7 @@ export class BookListComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+   //returns book of matching isbn
   showBookDetails(isbn: string) {
     this.book = this.books.find(book => book.isbn === isbn);
     //passes this.book to the data of the dialog object and sets the width of dialog

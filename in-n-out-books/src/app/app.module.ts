@@ -32,7 +32,7 @@ import { WishlistCreateComponent } from './wishlist-create/wishlist-create.compo
 import { FormsModule } from "@angular/forms";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
-
+//server side communcation
 import { HttpClientModule } from '@angular/common/http';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
