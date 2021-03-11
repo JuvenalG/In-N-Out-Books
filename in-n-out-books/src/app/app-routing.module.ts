@@ -37,8 +37,9 @@ const routes: Routes = [
     path: "wishlist" ,
     component: WishlistComponent
   },
-  { path: '**',         //used to redirect improper paths back to booklist
-    component:  BookListComponent }
+  { path: "**",
+    component: BookListComponent
+  }
 ];
 
 @NgModule({
